@@ -17,7 +17,7 @@ var now = Date.now();
 var difference = now - initialDate;
 var millisecondsperday = 24*60*60*1000;
 var daysSince = Math.floor(difference / millisecondsperday)
-alert(daysSince);
+//alert(daysSince);
 //let rightGuessString = PHILWORDS[daysSince]; 
 //let funfact = FUNFACTS[daysSince]
 
@@ -144,7 +144,7 @@ function checkGuess () {
             // letter is in the right position 
             if (currentGuess[i] === rightGuess[i]) {
                 // shade green 
-                letterColor = 'green'
+                letterColor = 'lime'
             } else {
                 // shade box yellow
                 letterColor = 'gold'
@@ -192,11 +192,11 @@ function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         if (elem.textContent === letter) {
             let oldColor = elem.style.backgroundColor
-            if (oldColor === 'green') {
+            if (oldColor === 'lime') {
                 return
             } 
 
-            if (oldColor === 'yellow' && color !== 'green') {
+            if (oldColor === 'yellow' && color !== 'lime') {
                 return
             }
 
