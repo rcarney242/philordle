@@ -17,9 +17,15 @@ var now = Date.now();
 var difference = now - initialDate;
 var millisecondsperday = 24*60*60*1000;
 var daysSince = Math.floor(difference / millisecondsperday)
+var birthDay = Math.floor(difference / millisecondsperday)
 //alert(daysSince);
 //let rightGuessString = PHILWORDS[daysSince]; 
 //let funfact = FUNFACTS[daysSince]
+
+if (birthDay = 0){
+    toastr.options.timeOut = 30000; // 30s
+    toastr.info(`Happy birthday stink! The best philosopher deserves the best philosophy game. I love you!`)
+}
 
 if (daysSince >= 0) {
     var rightGuessString = PHILWORDS[daysSince]
