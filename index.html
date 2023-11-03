@@ -21,16 +21,27 @@
             <style>
                 /* Define a CSS rule to set the font family to Times New Roman for buttons */
                 button {
-                  font-family: "Times New Roman", Times, serif;
+                  font-family: "Palatino", Times, serif;
                   color: black;
+                  width: 20%; /* Set the button width to 20% of the container */
                 }
-                /* Add CSS for mobile devices */
-                @media (max-width: 768px) {
-                      body {
-                          font-size: 14px; /* Adjust the base font size for smaller screens */
-                      }
 
-                      /* You can add more styles specific to mobile devices here */
+                #keyboard-cont {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                /* Define media queries for different screen sizes */
+                @media (max-width: 768px) {
+                    button {
+                        width: 30%; /* Adjust button width for smaller screens */
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    button {
+                        width: 40%; /* Further adjust button width for smaller screens */
+                    }
                 }
               </style>
             <button class="keyboard-button">q</button>
